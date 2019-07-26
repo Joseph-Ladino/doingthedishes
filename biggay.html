@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>THIS IS THE FUCKING TITLE</title>
+  </head>
+  <body>
+    <center>
+      <h1 style="background-color: yellow;">Dom is a fucking twat hole</h1>
+      <button id="idontcare">Click me thot</button>
+      <br />
+      <span id="no"></span>
+      <br />
+
+      <!-- (this is a comment btw) i'll show you images below -->
+      <!-- you do width and height with the style attribute -->
+
+      <img src="http://gifimage.net/wp-content/uploads/2017/06/elmo-fire-gif-6.gif" />
+
+      <br />
+    </center>
+
+    <script>
+    var myswitch = 0;
+    var colors = ["red", "orange", "yellow", "green", "blue", "purple", "black", "magenta", "seagreen", "cyan", "fuschia", "hotpink", "Navy"];
+      (document.getElementById("idontcare")).addEventListener("click", function(e) {
+        document.getElementById("no").innerHTML = "no homo, #triggered";
+      document.getElementById("no").setAttribute("style", "color: " + colors[Math.round(Math.random() * (colors.length - 1))]);
+      });
+
+      setInterval(function() {
+        document.querySelector("h1").setAttribute("style","background-color:" + colors[myswitch * 2]);
+        myswitch = (myswitch == 2) ? 1 : 2;
+      }, 100);
+
+    </script>
+  </body>
+</html>
