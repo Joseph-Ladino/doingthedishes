@@ -1,0 +1,160 @@
+
+      html {
+        background-image: url(https://d2v9ipibika81v.cloudfront.net/uploads/sites/16/st_davids_day_vpp_cardiff_wales-1140x684.jpg);
+        background-attachment: scroll;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100%;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        border: none;
+      }
+
+      body {
+        height: 100%;
+      }
+
+      .left {
+        position: absolute;
+        width: fit-content;
+        left: 5px;
+      }
+
+      .right {
+        position: absolute;
+        width: fit-content;
+        right: 5px;
+      }
+
+      #gg {
+        color:red;
+        background-color: #2e2a28;
+        width: fit-content;
+      }
+
+      #intro-text {
+        color: white;
+        opacity: 1;
+        font-size: 1.5em;
+        overflow-y: visible;
+        width: 60%;
+      }
+
+      #shield {
+        background-color: black;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: -1;
+        opacity: 0.75;
+      }
+
+      .vtable {
+        display: table;
+        width: 100%;
+        height: 100%;
+      }
+
+      .vcent {
+        display: table-cell;
+        vertical-align: middle;
+        height: 100%;
+        width: 100%;
+      }
+
+      #xbox-logo {
+        height: 9%;
+        position: absolute;
+        cursor: pointer;
+        left: 5px;
+        top: 5px;
+        border: 2px solid darkgrey;
+      }
+
+      #xbox-logo:hover {
+        border: 2px solid black;
+      }
+
+      .loader {
+        position: fixed;
+        width: 0.5em;
+        height: 0.5em;
+        margin-left: -0.25em;
+        margin-top: -0.25em;
+        top: 50%;
+        left: 50%;
+        z-index: 100;
+        border-radius: 50%;
+        border: 1px solid white;
+        border-top-color: black;
+        animation: spinme 2s 1;
+        background-color: rgba(0, 0, 0, 0.75);
+      }
+
+      .notif {
+        position: fixed;
+        width: 30%;
+        top: -2em;
+        left: 50%;
+        margin-left: -15%;
+        font-size: 1.5em;
+        overflow-x: visible;
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.9);
+        color: white;
+        border-radius: 8%;
+        border: 2px double darkgrey;
+        animation: toast 2.4s 1;
+      }
+
+      #page2 {
+        background-color: rgb(220, 0, 0);
+      }
+
+      .arrow {
+        font-size: 10em;
+        display: inline;
+        font-weight: bolder;
+      }
+      
+      .arrow span {
+        width: fit-content;
+      }
+
+      @keyframes toast {
+        25% {
+          top: 1em;
+        }
+        80% {
+          top: 1em;
+        }
+
+      }
+
+      @keyframes spinme {
+        10% {
+          width: 0.5em;
+          height: 0.5em;
+          margin-left: -0.25em;
+          margin-top: -0.25em;
+          transform: rotate(0deg);
+        }
+        90% {
+          width: 14.4em;
+          height: 14.4em;
+          margin-left: -7.2em;
+          margin-top: -7.2em;
+          border-width: 15px;
+        }
+        100% {
+          width: 0.5em;
+          height: 0.5em;
+          margin-left: -0.25em;
+          margin-top: -0.25em;
+          border-width: 1px;
+          transform: rotate(360deg);
+        }
+      }
