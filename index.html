@@ -1,52 +1,171 @@
 <!DOCTYPE html>
+
 <html>
 
   <head>
-
-    <title> Aaron Millers First Web Page</title>
-
+    <meta property="og:title" content="Life of a Gamer" />
+    <meta property="og:description" content="You ever wonder 'what are those darn gamers up to'? now's your chance to find out!" />
+    <title>Life of A Gamer</title>
     <style>
-      .wrapper {
-        background-color: blue;
-      }
-    </style>
 
+      html {
+        background-image: url(https://d2v9ipibika81v.cloudfront.net/uploads/sites/16/st_davids_day_vpp_cardiff_wales-1140x684.jpg);
+        background-attachment: scroll;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100%;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        border: none;
+      }
+
+      body {
+        height: 100%;
+      }
+
+      .left {
+        position: absolute;
+        width: fit-content;
+        left: 5px;
+      }
+
+      .right {
+        position: absolute;
+        width: fit-content;
+        right: 5px;
+      }
+
+      #gg {
+        color:red;
+        background-color: blue;
+        width: fit-content;
+      }
+
+      #intro-text {
+        color: white;
+        opacity: 1;
+        font-size: 1.5em;
+        overflow-y: visible;
+        width: 60%;
+      }
+
+      #shield {
+        opacity: 1;
+        background-color: black;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        z-index: -1;
+        opacity: 0.75;
+      }
+
+      .vtable {
+        display: table;
+        height: 100%;
+      }
+
+      .vcent {
+        display: table-cell;
+        vertical-align: middle;
+        height: 100%;
+      }
+
+      #xbox-logo {
+        width: 10%;
+        height: 9%;
+        position: absolute;
+        cursor: pointer;
+        left: 5px;
+        top: 5px;
+      }
+
+      .loader {
+        position: fixed;
+        width: 2px;
+        height: 2px;
+        margin-left: -1px;
+        margin-top: -1px;
+        top: 50%;
+        left: 50%;
+        z-index: 100;
+        box-sizing: border-box;
+        border-radius: 50%;
+        border: 5px solid white;
+        border-top-color: black;
+        animation: spinme 2s 1;
+        background-color: rgba(0, 0, 0, 0.75);
+      }
+
+      @keyframes spinme {
+        10% {
+          width: 200px;
+          height: 200px;
+          margin-left: -100px;
+          margin-top: -200px;
+          border-width: 15px;
+        }
+        50% {
+          font-size: 100px;
+        }
+        90% {
+          width: 200px;
+          height: 200px;
+          margin-left: -100px;
+          margin-top: -200px;
+          border-width: 15px;
+        }
+        100% {
+          width: 2px;
+          height: 2px;
+          margin-left: -1px;
+          margin-top: -1px;
+          border-width: 5px;
+          transform: rotate(360deg);
+        }
+      }
+
+    </style>
   </head>
 
   <body>
 
-    <center>
-      <h1 style="background-color:Yellow;">Im new to this stuff</h1>
+    <div id="shield"></div>
 
-      <a href="https://tacticalgaming.net/hq/" target="_blank">
+    <img id="xbox-logo" src="https://assets.fontsinuse.com/static/use-media-items/60/59315/full-2000x762/59fe2020/2000px-Xbox-logo-schwarz-svg.png?resolution=0" />
 
-        <h2 style="display: inline">https://tacticalgaming.net/hq/</h2>
+    <center class="vtable">
 
-      </a>
+      <div class="vcent">
 
-      <br />
-<!--
-      <div class="wrapper">
-          <h1>I am wrapped</h1>
+        <h1 id="gg" title="Suck on that dom">HOWDY THERE GAMER GIRLS, PREPARED FOR THE HOSTILE TAKEOVER??</h1>
+        <br />
+        <br />
+        <p id="intro-text">
+        Ever find yourself wondering what it would be like to infiltrate a international gaming squad and hostily take it over? Well this is the page for you....! Follow myself (booboo_mcgoo) and DRTNT25 (tnt = tiny nipple tits) as we share our journey of just that! Woooooooooooooooooooo!!!!
+        </p>
+
       </div>
-      <br />
-      <div class="wrapper">
-          <h1>I am bubble wrapped</h1>
-      </div>
--->
 
-      <a href="https://google.com" target="_blank">Google</a>
-      <br />
-      <a href="https://youtube.com">Youtube</a>
-      <br />
-      <a href="https://espn.com"target="_blank">ESPN</a>
+    </center>
+    <script type="text/javascript">
+      var xbtn = document.getElementById("xbox-logo");
 
-      <h2>https://www.w3schools.com/html/html_elements.asp</h2>
+      function loadscreen() {
+        var el = document.createElement("div");
+        el.className = "loader";
+        document.body.appendChild(el);
+        setTimeout(()=>{
+          document.getElementsByClassName("loader")[0].remove();
+          setTimeout(()=>{
+            alert("#DomIsA❄️");
+          }, 100);
+        }, 2019);
+      }
 
-      <h2>https://tacticalgaming.net/hq/topic/133557-mycale-in-squad-practice-summary-discussion/page/2/?tab=comments#comment-1313875</h2>
-
-      <p>My First Paragraph.</p>
-
-    </body>
-
+      xbtn.addEventListener("click", (e)=>{loadscreen(e.path[0])});
+    </script>
+  </body>
 </html>
